@@ -1,0 +1,407 @@
+* {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: cursive;
+}
+
+#main-body {
+  font-family: cursive;
+  background-color: #202020;
+}
+
+#main-body .filter-notes select {
+  border-radius: 10px;
+  border-color: gray;
+  border-width: 1px;
+  color: #202020;
+}
+
+#main-body .filter-notes select option {
+  color: #202020;
+}
+
+#main-body .default-button {
+  background-color: transparent;
+  border-color: gray;
+  border-width: 2px;
+  border-style: solid;
+  color: gray;
+  border-radius: 5px;
+}
+
+#main-body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+#main-body section #left-column {
+  font-family: cursive;
+  width: 20%;
+  background-color: transparent;
+  border-right: 1px;
+  border-color: gray;
+  border-style: solid;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main-body section #left-column h1 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 25px;
+  height: 45px;
+  border-bottom: 1px;
+  z-index: 5;
+  border-color: gray;
+  border-style: solid;
+}
+
+#main-body section #left-column #filter-notes1 {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-color: gray;
+}
+
+#main-body section #left-column #all-notes {
+  z-index: 1;
+  height: calc(100vh - 100px);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  text-align: center;
+}
+
+#main-body section #left-column #all-notes #notes-heading {
+  display: block;
+  border: 3px;
+  padding: 10px;
+  border-color: gray;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 15px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-body section #left-column #all-notes #notes-heading:hover {
+  background-color: #a2a2a2;
+}
+
+#main-body section #left-column #all-notes #notes-heading:active {
+  padding: 9px;
+}
+
+#main-body section #right-column {
+  height: 100vh;
+  width: 80%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+#main-body section #right-column #top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 5;
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px;
+  border-color: gray;
+  border-style: solid;
+}
+
+#main-body section #right-column #top-row #input-name {
+  display: inline;
+  margin-left: 30%;
+  background-color: #393939;
+  width: 30%;
+  border-radius: 10px;
+  height: 30px;
+  color: gray;
+  margin-top: 10px;
+}
+
+#main-body section #right-column #top-row #add-note {
+  background-image: url("/img/addIcon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin-left: 3%;
+  margin-top: 12px;
+}
+
+#main-body section #right-column #top-row #open-settings {
+  float: right;
+  display: block;
+  margin-top: 15px;
+  margin-left: 10%;
+  background-image: url("/img/settings.png");
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  border-style: none;
+  z-index: 30;
+}
+
+#main-body section #right-column #single-note {
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  height: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main-body section #right-column #single-note #single-heading {
+  color: whitesmoke;
+  width: 40%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#main-body section #right-column #single-note #filter-notes2 {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+#main-body section #right-column #single-note #single-text {
+  color: whitesmoke;
+  width: 90%;
+  height: 90%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+}
+
+#main-body section #right-column #single-note .simp-button {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+#main-body section #right-column #single-note #delete-note {
+  background-image: url("/img/deleteIcon.png");
+}
+
+#main-body section #right-column #single-note #save-note {
+  background-image: url("/img/save.webp");
+}
+
+#main-body #settings-bar {
+  visibility: hidden;
+  height: calc(100vh + 30px);
+  background-color: gray;
+  width: 100%;
+  z-index: 15;
+  opacity: .9;
+  position: absolute;
+}
+
+#main-body #settings-bar #close-settings {
+  position: absolute;
+  background-image: url("/img/cross.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background-color: gray;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#main-body #settings-bar .settings-header {
+  font-size: 25px;
+  font-weight: bold;
+  border-right: 6px;
+  border-style: solid;
+  border-color: whitesmoke;
+  padding-right: 15px;
+}
+
+#main-body #settings-bar .userName {
+  padding-top: 20px;
+}
+
+#main-body #settings-bar #setting-options {
+  width: 35%;
+  text-align: right;
+  padding-top: 180px;
+}
+
+#main-body #settings-bar #setting-options h3 {
+  font-size: 35px;
+  line-height: 60px;
+  display: block;
+}
+
+#main-body #settings-bar #setting-options h3:hover {
+  font-size: 40px;
+}
+
+#main-body #settings-bar #setting-submenus {
+  width: 65%;
+  margin-left: 3%;
+  margin-top: 20vh;
+}
+
+#main-body #settings-bar #setting-submenus ul {
+  width: 100%;
+}
+
+#main-body #settings-bar #setting-submenus ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 50px;
+}
+
+#main-body #settings-bar #setting-submenus ul li h3 {
+  border: none;
+}
+
+#main-body #settings-bar #setting-submenus ul li button {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  right: 40px;
+  margin-top: 8px;
+}
+
+#main-body #settings-bar #setting-submenus ul #enable-login {
+  width: 100px;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+}
+
+#main-body #user-credentials {
+  position: absolute;
+  top: 0px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 30%;
+  z-index: 200;
+  background-color: gray;
+  text-align: center;
+  height: 60%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #272727;
+  border-radius: 20px;
+}
+
+#main-body #user-credentials .credentials-input {
+  color: slategrey;
+  width: 150px;
+  border-radius: 10px;
+}
+
+#main-body #user-credentials .credentials-heading {
+  font-size: 60px;
+  font-family: cursive;
+  padding-bottom: 40px;
+}
+
+#main-body #user-credentials .credentials-name {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-right: 5px;
+  line-height: 20px;
+}
+
+#main-body #user-credentials .credentials-enter {
+  color: slategray;
+  font-size: 20px;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+#main-body #user-credentials .theme_main {
+  padding-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+#main-body #user-credentials .theme_main div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-body #user-credentials #login {
+  margin-left: 20%;
+}
+
+#main-body #user-credentials #sign-in {
+  margin-left: -70%;
+}
+
+#main-body #status-bar {
+  width: 100%;
+  height: 4%;
+  position: absolute;
+  margin-bottom: 0px;
+  background-color: gray;
+  z-index: 200;
+}
+
+#main-body #status-bar p {
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 4%;
+}
+/*# sourceMappingURL=main.css.map */

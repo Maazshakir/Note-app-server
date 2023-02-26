@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Notes App</title>
+</head>
+<body id="main-body">
+
+
+
+    <section id="user-credentials" style="visibility: hidden;">
+        <div>
+            <button style="position: absolute;top: 20px;right: 10px;color: slategray;border-radius: 10px;font-size: 15px;text-transform: uppercase;" onclick="hideSignin()">
+                exit
+            </button>
+        </div>
+        <div id="login" class="theme_main" style="visibility: hidden;">
+            <h2 class="credentials-heading" id="Login-heading">Login</h2>
+
+            <div><h3 class="credentials-name">Email(@):.</h3><input class="credentials-input" type="email" name="" id="login-email"></div>
+
+            <br>
+
+            <div><h3 class="credentials-name">Password:.</h3><input class="credentials-input" type="text" maxlength="15" name="" id="login-password"></div>
+
+            <br>
+
+            <button class="credentials-enter" id="login-button">Login</button>
+            <p style="padding-top: 10px;">Don't have an account?<span style="color:rgb(157, 157, 240)" onclick="signInview()"> sign in</span></p>
+    
+        </div>
+    
+        <div class="theme_main" id="sign-in"   >
+            <h2 class="credentials-heading" id="Signin-heading">Sign-in</h2>
+
+            <div><h3 class="credentials-name">Username:</h3> <input class="credentials-input" type="text" maxlength="15"  name="" id="signin-username"></div>
+            <br>
+
+            <div><h3 class="credentials-name">Email(@):.</h3> <input class="credentials-input" type="email" name="" id="signin-email"></div>
+            <br>
+            
+            <div><h3 class="credentials-name">Password:.</h3><input maxlength="15"  class="credentials-input" type="text" name="" id="signin-password"></div>
+            <br>
+            
+            <button class="credentials-enter" id="signIn-button">Sign-in</button>
+            <p style="padding-top: 10px;">Already registered?<span onclick="loginview()" style="color:rgb(157, 157, 240)"> login</span></p>
+        </div>
+        <script>
+            let loginView = document.getElementById("login");
+            let signInView = document.getElementById("sign-in");
+    
+            function loginview(){
+                signInView.style.visibility= "hidden";
+                loginView.style.visibility = "visible";
+            }
+    
+            function signInview(){
+                signInView.style.visibility= "visible";
+                loginView.style.visibility = "hidden";
+    
+            }
+        </script>
+        <script src="/js/dataverifier.js"></script>
+    </section>
+
+
+
+
+
+    <section id="settings-bar">
+        <button class="simp-button" id="close-settings" onclick="closeSettings()"></button>
+
+        <div id="setting-options">
+            <h3 class="settings-header" onclick="changeView(1)">Theme</h3>
+            <h3 class="settings-header" onclick="changeView(2)">Font</h3>
+            <h3 class="settings-header" onclick="changeView(3)">Settings</h3>
+            <h3 class="settings-header" onclick="changeView(4)">User</h3>
+        </div>
+        <div id="setting-submenus">
+            
+
+        </div>
+
+    </section>
+
+    <section class="sections" id="main-section">
+        <section id="left-column">
+            <h1>Unote</h1>
+            <div id="all-notes">
+            </div>
+        </section>
+
+        <section id="right-column">
+            <div id="top-row">
+                <input type="text" id="input-name" placeholder="Enter the Notes Title">
+                <button id="add-note"></button>
+
+                <button class="default-button" id="open-settings" onclick="openSettings()"></button>
+                
+            </div>
+            <div id="single-note">
+                <input id="single-heading" value='' maxlength="10">
+                <button class="simp-button" id="delete-note"></button>
+                <button class="simp-button" id="save-note" onclick="saveNote()"></button><br>
+                <textarea id="single-text"></textarea>
+            </div>
+        </section>
+    </section>
+
+    <section id="status-bar">
+        <p>Status: <span id="current-status"> - </span></p>
+    </section>
+
+
+    
+    <script src="/js/note.js"></script>
+    <script src="/js/state.js"></script>
+    <script src="/js/settings.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script src="js/loadapp.js"></script>
+
+    <script  src="/js/boot.js" defer></script>
+    <script src="js/updatedb.js"></script>
+</body>
+</html>
